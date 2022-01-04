@@ -1,0 +1,131 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+
+.checkout_cart_page_area {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  grid-gap: 20px;
+
+  .shipping_details_area {
+    border: 1px solid #eee;
+    padding: 30px;
+    form {
+      h2 {
+        @include any_title;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 26px;
+        line-height: 40px;
+        padding: 10px 0;
+      }
+      .button {
+        @include global_button;
+        margin-top: 20px;
+        width: 250px;
+        background-color: #000;
+        color: #fff;
+        &:hover {
+          background-color: $color-yellow;
+          color: #000;
+        }
+      }
+    }
+
+    .information_show_and_payment_area {
+      h2 {
+        @include any_title;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 20px;
+        padding: 10px 0;
+      }
+      .button {
+        @include global_button;
+        margin-top: 20px;
+        width: 250px;
+        background-color: #000;
+        color: #fff;
+        &:hover {
+          background-color: $color-yellow;
+          color: #000;
+        }
+      }
+      .button_return {
+        @include global_button;
+        margin-top: 20px;
+        width: 250px;
+        background-color: transparent;
+        color: $color-yellow;
+        &:hover {
+          color: #000;
+        }
+      }
+      p {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 12px;
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+        span {
+          color: #808080;
+          font-weight: 400;
+        }
+      }
+
+      .shippingRate {
+        div {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 12px;
+          input {
+            width: 50px;
+          }
+          
+        }
+        span {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 12px;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.input_option_country {
+  margin: 15px 0;
+  display: grid;
+  grid-template-columns: 2.5fr 7fr;
+  width: 500px;
+  align-items: center;
+  label {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  select {
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    border-radius: 3px;
+    color: $color-dark-gray;
+    font-size: 15px;
+    &:focus {
+      border: 1px solid #3f3ff8;
+      outline: none;
+    }
+  }
+
+  input {
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    border-radius: 3px;
+    color: $color-dark-gray;
+    font-size: 15px;
+    &:focus {
+      border: 1px solid #3f3ff8;
+      outline: none;
+    }
+  }
+}

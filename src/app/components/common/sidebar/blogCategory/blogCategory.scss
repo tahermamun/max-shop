@@ -1,0 +1,38 @@
+@import "../../../../style/abstracts/mixins";
+@import "../../../../style/abstracts/variables";
+
+.blog_category {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  margin: 10px 0;
+  .title {
+    @include any_title(50px);
+    background-color: #eee;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 5px;
+  }
+  ul {
+    padding: 0 15px;
+    li {
+      list-style: none;
+      a {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 30px;
+        color: $color-dark-gray;
+        text-decoration: none;
+        &:hover {
+          color: $color-yellow;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 600px) {
+  .blog_category {
+    display: none;
+  }
+}

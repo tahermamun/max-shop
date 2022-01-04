@@ -1,0 +1,121 @@
+@mixin global_button {
+  padding: 10px 26px;
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 500ms ease 0s;
+  border: none;
+  border-radius: 5px;
+}
+
+@mixin global_button_mobile {
+  padding: 5px 13px;
+  line-height: 13px;
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 500ms ease 0s;
+  border: none;
+  border-radius: 5px;
+}
+
+@mixin section_title {
+  h2 {
+    float: left;
+    font-size: $font-size-medium;
+    line-height: 30px;
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+    // width: 13%;
+    &::after {
+      content: "";
+      height: 3px;
+      width: 45%;
+      background-color: $color-yellow;
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  div {
+    float: right;
+    display: flex;
+    a {
+      @include global_button;
+      color: $color-light-gray;
+      padding: 10px 15px;
+      &:hover {
+        color: $color-yellow;
+      }
+    }
+    .active {
+      color: $color-yellow;
+    }
+    div {
+      button {
+        background-color: $color-white-dark;
+        color: #fff;
+        border-radius: 50%;
+        // padding: 10px;
+        height: 40px;
+        width: 40px;
+        font-size: $font-size-medium;
+        border: none;
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+@mixin section_title_mobile {
+  h2 {
+    float: left;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-weight: 700;
+    width: 20%;
+    &::after {
+      width: 45%;
+    }
+  }
+  div {
+    a {
+      @include global_button_mobile;
+    }
+    div {
+      button {
+        padding: 0 8px;
+      }
+    }
+  }
+}
+
+@mixin any_title($width: 8%) {
+  margin-bottom: 20px;
+  font-size: $font-size-medium;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  &::after {
+    content: "";
+    height: 3px;
+    width: $width;
+    background-color: $color-yellow;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+

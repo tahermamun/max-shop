@@ -1,0 +1,79 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+
+// featured product section start
+.featured_product_section {
+    margin: 40px 0;
+    height: 800px;
+    .title_area {
+        @include section_title;
+    }
+    .product_area {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        grid-gap: 15px;
+        height: 640px;
+        .adds_box {
+            position: relative;
+            img {
+                height: 620px;
+                width: 100%;
+            }
+            div {
+                color: red;
+                padding: 20px;
+                position: absolute;
+                bottom: 80px;
+                h5 {
+                    background-color: $color-yellow;
+                    color: $color-dark;
+                    display: inline-block;
+                    padding: 5px;
+                    font-size: $font-size-large;
+                }
+                h2 {
+                    color: #fff;
+                    padding: 5px;
+                    font-size: $font-size-large;
+                }
+                p {
+                    color: $color-white-dark;
+                    padding: 5px;
+                    font-size: $font-size-small;
+                }
+            }
+        }
+        .product_box {
+            display: grid;
+            grid-template-rows: 2fr;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 15px;
+            
+        }
+    }
+}
+
+@media only screen and(max-width: 600px) {
+    .featured_product_section {
+        margin-top: 200px;
+        height: 800px;
+        .title_area {
+            @include section_title_mobile;
+        }
+        .product_area {
+            grid-template-columns: 1fr;
+            grid-gap: 15px;
+            height: auto;
+            .adds_box {
+                display: none;
+            }
+            .product_box {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 4fr;
+            }
+        }
+    }
+}
+
+// featured product section end

@@ -1,0 +1,30 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+// new product section start
+.new_product_section {
+    margin-top: 60px;
+    .title_area {
+        @include section_title;
+    }
+    .product_area {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 15px;
+        
+    }
+}
+
+@media only screen and(max-width:600px) {
+    .new_product_section {
+        margin-top: 40px;
+        .title_area {
+            @include section_title_mobile;
+        }
+        .product_area {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+// new product section end

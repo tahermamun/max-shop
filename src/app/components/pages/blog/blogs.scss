@@ -1,0 +1,53 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+
+.blog_page_area {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  grid-gap: 25px;
+
+  .blog_page_box {
+    .single_page_header {
+      img {
+        width: 100%;
+      }
+      .title {
+        margin-top: 10px;
+        @include any_title(50px);
+      }
+      p {
+        color: #888;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+      }
+    }
+    .blogs {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 15px;
+    }
+  }
+}
+
+@media only screen and(max-width: 600px) {
+  .blog_page_area {
+    padding-top: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "products"
+      "left_sidebar";
+    grid-gap: 25px;
+    .blog_page_box {
+      .blogs {
+        grid-area: products;
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+      }
+    }
+  }
+}

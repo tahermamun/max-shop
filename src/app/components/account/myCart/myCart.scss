@@ -1,0 +1,14 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+
+
+.my_cart{
+    // padding: 50px;
+    h2 {
+        @include any_title;
+        font-size: 22px;
+      }
+    table{
+        // margin: 30px;
+    }
+}

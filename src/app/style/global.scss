@@ -1,0 +1,37 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+* {
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 0px;
+  margin: 0;
+}
+
+// global style start
+.main_container {
+  padding: 0 7.5% 0 7.5%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.clear_fix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.error {
+  color: red;
+  padding: 0px;
+  line-height: 0;
+  margin: 10px 0 -10px 0;
+  font-size: 15px;
+  font-weight:700;
+  text-align: start;
+}
+
+@media only screen and(max-width:600px) {
+  .main_container {
+    padding: 0 5% 0 5%;
+  }
+}

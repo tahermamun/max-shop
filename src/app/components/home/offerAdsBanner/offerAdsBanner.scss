@@ -1,0 +1,62 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+
+// offer section start
+.offer_banner_section {
+    margin: 30px 0;
+    .offer_banner_img {
+        img {
+            width: 100%;
+        }
+    }
+    .offer_banner_description {
+        text-align: center;
+        margin-top: -150px;
+        h2 {
+            font-size: $font-size-large;
+            font-weight: 500;
+        }
+        p {
+            font-size: $font-size-x-small;
+            font-weight: 400;
+            color: $color-dark-gray;
+        }
+        button {
+            @include global_button;
+            background-color: $color-dark;
+            color: #fff;
+            margin: 0px 0;
+            &:hover {
+                color: $color-dark;
+                background-color: $color-yellow;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .offer_banner_section {
+        .offer_banner_description {
+            text-align: center;
+            margin-top: -55px;
+            h2 {
+                font-size: $font-size-small;
+                font-weight: 500;
+                line-height:0px;
+            }
+            p{
+                line-height:10px;
+                margin: 0;
+                padding: 5px 0;
+
+            }
+            button {
+                @include global_button_mobile;
+                line-height:10px;
+
+            }
+        }
+    }
+}
+
+// offer section end

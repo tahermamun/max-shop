@@ -1,0 +1,52 @@
+@import "../../../../style/abstracts/mixins";
+@import "../../../../style/abstracts/variables";
+
+.shop_category {
+  border: 2px solid $color-yellow;
+  border-radius: 10px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  p {
+    background-color: $color-yellow;
+    padding: 15px 20px;
+    font-size: $font-size-small;
+    font-weight: 600;
+    border-radius: 10px;
+    margin: -1px;
+    width: 101%;
+    .icon {
+      margin-right: 5px;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      padding: 12px 15px;
+      margin: 0 0px;
+      a {
+        text-decoration: none;
+        color: $color-dark-gray;
+        font-size: $font-size-small;
+        font-weight: 400;
+        &:hover {
+          color: $color-yellow;
+          transition-duration: 0.3s;
+        }
+        .icon {
+          margin-right: 5px;
+          font-size: $font-size-small;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 600px) {
+  .shop_category {
+    display: none;
+    }
+  }
+

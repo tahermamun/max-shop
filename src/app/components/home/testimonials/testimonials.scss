@@ -1,0 +1,117 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+
+// testimonial section start
+.testimonial_section {
+  // background-color: red;
+  padding: 0px 80px;
+  .testimonial_upper_style {
+    position: relative;
+    p {
+      background-color: $color-yellow;
+      padding: 17px;
+      position: absolute;
+      top: -30px;
+      left: -45px;
+      .icon {
+        color: rgb(255, 255, 255);
+        font-size: 40px;
+      }
+    }
+  }
+  .testimonials {
+    margin: 70px 0;
+    padding: 40px;
+    background-color: $color-white-dark;
+    display: grid;
+    grid-template-columns: 0.5fr 11fr 0.5fr;
+    grid-gap: 60px;
+    button {
+      border: none;
+      background-color: transparent;
+    }
+    .testimonial {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      .feedback_header {
+        position: relative;
+        img {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+        }
+        .icon {
+          position: absolute;
+          font-size: 55px;
+          right: 60px;
+          top: 30px;
+          color: $color-yellow;
+        }
+      }
+      .feedback_body {
+        align-self: center;
+        .review {
+          padding: 0 0 15px 0;
+          color: $color-yellow;
+          font-size: $font-size-x-small;
+        }
+        h2 {
+          font-size: $font-size-large;
+          font-weight: 200;
+        }
+        p {
+          // color: $color-light-gray;
+          font-size: $font-size-small;
+          // color: $color-yellow;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 600px) {
+  .testimonial_section {
+    margin: 800px auto;
+    padding: 0px 20px;
+    margin-bottom: 100px;
+    .testimonial_upper_style {
+      i {
+        padding: 15px;
+        font-size: 20px;
+        top: -20px;
+        left: -25px;
+      }
+    }
+    .testimonials {
+      padding: 15px;
+      grid-gap: 10px;
+      .testimonial {
+        grid-template-columns: 5fr 7fr;
+        .feedback_header {
+          align-self: center;
+          img {
+            width: 100px;
+            height: 100px;
+          }
+          i {
+            font-size: 35px;
+            right: 5px;
+            top: 0px;
+            color: $color-yellow;
+          }
+        }
+        .feedback_body {
+          h2 {
+            font-size: $font-size-medium;
+          }
+          p {
+            font-size: $font-size-x-small;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+
+// testimonial section end

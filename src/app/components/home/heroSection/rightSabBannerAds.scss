@@ -1,0 +1,53 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+
+.right_sabbanner_ads {
+  display: grid;
+  grid-gap: 25px;
+  .ads_card {
+    img {
+      background-size: contain;
+      height: 200px;
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+    }
+    p {
+      background-color: $color-dark;
+      color: #fff;
+      border-radius: 0 0 5px 5px;
+      padding: 8px 5px 5px 5px;
+      font-size: $font-size-x-small;
+      display: flex;
+      justify-content: space-between;
+      margin-top: -7px;
+      z-index: 1;
+      button {
+        background-color: $color-yellow;
+        border: none;
+        border-radius: 5px;
+        padding: 2px 5px;
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 600px) {
+  .right_sabbanner_ads {
+    margin-top: -140px;
+    grid-area: right_sabbanner;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    .ads_card {
+      img {
+        height: 150px;
+      }
+      p {
+        padding: 8px 5px 5px 5px;
+        button {
+          font-size: $font-size-x-small;
+        }
+      }
+    }
+  }
+}

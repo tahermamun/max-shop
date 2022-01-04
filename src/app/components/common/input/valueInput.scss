@@ -1,0 +1,41 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+
+.value_input_div {
+  margin:15px 0 ;
+  display: grid;
+  grid-template-columns: 2.5fr 7fr;
+  width: 70%;
+  align-items: center;
+  .label_for_input {
+      font-size:15px;
+      font-weight: 500;
+
+  }
+
+  input {
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    border-radius: 3px;
+    color: $color-dark-gray;
+    font-size: 15px;
+    &:focus {
+      border: 1px solid #3f3ff8;
+      outline: none;
+    }
+  }
+
+
+  input {
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    border-radius: 3px;
+    color: $color-dark-gray;
+    font-size: 15px;
+    &:focus {
+      border: 1px solid #3f3ff8;
+      outline: none;
+    }
+  }
+
+}

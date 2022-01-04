@@ -1,0 +1,26 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+
+// blog section start
+.blog_section {
+  margin-top: 40px;
+  .title_area {
+    @include section_title;
+  }
+  .blog_area {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and(max-width: 600px) {
+  .blog_section {
+    .blog_area {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// blog section end

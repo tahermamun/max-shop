@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "title": "Accusantium Voluptatem",
+    "mainPrice": "89.63",
+    "disPrice": "",
+    "img": " https://i.ibb.co/KWCpqXW/product-pic-1.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Occasion praesentium",
+    "mainPrice": "14.55",
+    "disPrice": "",
+    "img": " https://i.ibb.co/k6Ln4bq/product-pic-2.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Laudant doloremque",
+    "mainPrice": "441.00",
+    "disPrice": "341.00",
+    "img": "  https://i.ibb.co/LJZtjRh/product-pic-3.jpg"
+  },
+  {
+    "id": "4",
+    "title": "Pricila Onterkolia",
+    "mainPrice": "89.12",
+    "disPrice": "73.12",
+    "img": " https://i.ibb.co/yXF5Ldh/product-pic-4.jpg"
+  },
+  {
+    "id": "5",
+    "title": "Hondortaro Menjila",
+    "mainPrice": "23.84",
+    "disPrice": "",
+    "img": "https://i.ibb.co/dmYthQh/product-pic-5.jpg"
+  },
+  {
+    "id": "6",
+    "title": "Pripeonle Qrikapice",
+    "mainPrice": "704.55",
+    "disPrice": "301.50",
+    "img": " https://i.ibb.co/KWCpqXW/product-pic-1.jpg"
+  },
+  {
+    "id": "7",
+    "title": "Ocearn Hrlprarlee",
+    "mainPrice": "59.55",
+    "disPrice": "55.00",
+    "img": " https://i.ibb.co/CQ6n4dg/product-pic-6.jpg"
+  },
+  {
+    "id": "8",
+    "title": "Maxhunter Gorilaukr",
+    "mainPrice": "101.36",
+    "disPrice": "51.36",
+    "img": "https://i.ibb.co/rbbGKXp/product-pic-7.jpg"
+  }
+]

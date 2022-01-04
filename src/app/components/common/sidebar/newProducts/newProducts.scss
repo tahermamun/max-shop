@@ -1,0 +1,65 @@
+@import "../../../../style/abstracts/mixins";
+@import "../../../../style/abstracts/variables";
+
+.new_products_area {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin: 10px 0;
+    .title {
+      background-color: #eee;
+      @include any_title(50px);
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: capitalize;
+      padding: 5px;
+    }
+    .products {
+      .products_card {
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        margin: 5px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+        img {
+          width: 100%;
+          background-color: #eee;
+        }
+        .card_body {
+          h1 {
+            font-size: $font-size-small;
+            font-weight: 400;
+            line-height: 18px;
+            color: $color-light-gray;
+            &:hover {
+              color: $color-yellow;
+            }
+          }
+          .price {
+            font-size: $font-size-small;
+            color: $color-dark;
+            font-weight: 600;
+            span {
+              text-decoration: line-through;
+              font-weight: 300;
+              color: $color-light-gray;
+              padding: 3px;
+            }
+          }
+          .review {
+            .icon {
+              font-size: $font-size-x-small;
+              color: $color-yellow;
+            }
+          }
+        }
+      }
+      a {
+        @include global_button;
+        margin: 0 0 0 -15px;
+        color: $color-light-gray;
+        &:hover {
+          color: $color-yellow;
+        }
+      }
+    }
+}

@@ -1,0 +1,28 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+
+.normal_page {
+  padding: 40px 0;
+  h1 {
+    @include any_title;
+    font-size: 28px;
+    line-height: 40px;
+  }
+  p {
+    font-size: 14px;
+    color: #808080;
+
+  }
+  .content {
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #808080;
+
+    }
+    p {
+      font-size: 14px;
+      color: #808080;
+    }
+  }
+}

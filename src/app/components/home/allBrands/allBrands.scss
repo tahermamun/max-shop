@@ -1,0 +1,49 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+
+
+// our brand section start
+.our_brand_section {
+    margin: 40px 0;
+    .title_area {
+        @include section_title;
+    }
+    .bard_area {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: 25px;
+        justify-items: center;
+        img {
+            background-color: #f2f2f2;
+            height: 100px;
+            width: auto;
+            padding: 30px 20px;
+        }
+    }
+}
+
+@media only screen and(max-width: 600px) {
+    .our_brand_section {
+        .title_area {
+            @include section_title_mobile;
+        }
+        .bard_area {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            img {
+                height: 90px;
+                width: 100%;
+                padding: 30px 15px;
+                &:nth-child(even) {
+                    display: none;
+                }
+                &:first-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// our brand section end

@@ -1,0 +1,97 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+
+.newsletter_area {
+  background-color: $color-semi-dark;
+  height: 100px;
+  .newsletter {
+    height: 100px;
+    display: grid;
+    grid-template-columns: 3fr 3fr 2fr;
+    justify-items: center;
+    align-items: center;
+    .left {
+      display: grid;
+      grid-template-columns: 1fr 11fr;
+      grid-gap: 15px;
+      .icon {
+        justify-self: center;
+        font-size: 44px;
+        color: $color-yellow;
+        align-self: center;
+      }
+      div {
+        h2 {
+          font-size: 22px;
+          font-weight: 500px;
+          line-height: 36px;
+          color: #fff;
+        }
+        p {
+          font-size: 13px;
+          font-weight: 500px;
+          line-height: 26px;
+          color: #888;
+        }
+      }
+    }
+    .middle {
+      width: 100%;
+      display: flex;
+      input {
+        width: 100%;
+        padding: 15px 10px;
+        outline: none;
+        border-radius: 10px 0 0 10px;
+        border: none;
+      }
+      button {
+        width: 20%;
+        padding: 15px 10px;
+        margin-left: -8px;
+        background-color: $color-yellow;
+        border: none;
+        border-radius: 0 10px 10px 0;
+        .icon {
+          font-size: 18px;
+        }
+        &:hover {
+          background-color: $color-dark;
+          .icon {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .right {
+      a {
+        text-decoration: none;
+        color: #888;
+        padding: 0 10px;
+        .icon {
+          font-size: 18px;
+        }
+        &:hover {
+          color: $color-yellow;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 600px) {
+  .newsletter_area {
+    .newsletter {
+      height: 200px;
+      grid-template-columns: 3fr;
+      .left {
+        .icon {
+          margin-left: 50px;
+        }
+      }
+      .middle {
+        padding: 0 30px;
+      }
+    }
+  }
+}

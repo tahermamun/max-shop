@@ -1,0 +1,266 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+
+
+
+// product offer counter section start
+
+.product_offer_counter_section {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    grid-gap: 15px;
+    .offer_counter_sidebar {
+        position: relative;
+        img {
+            height: 400px;
+            border-radius: 5px;
+        }
+        div {
+            position: absolute;
+            top: 40px;
+            left: 16px;
+            p {
+                font-size: $font-size-small;
+                font-weight: 400px;
+                color: #fff;
+            }
+            h5 {
+                margin-top: 5px;
+                font-size: $font-size-medium;
+                font-weight: 600px;
+                color: #fff;
+            }
+            h3 {
+                margin-top: 5px;
+                font-size: $font-size-x-large;
+                font-weight: 600px;
+                color: rgb(0, 0, 0);
+            }
+            button {
+                @include global_button;
+                margin-top: 5px;
+                background-color: $color-dark;
+                color: #fff;
+                &:hover {
+                    background-color: $color-yellow;
+                    color: #000;
+                }
+            }
+        }
+    }
+    .middle_offer_counter {
+        height: 450px;
+        border: 2px solid #ececec;
+        border-radius: 5px;
+        position: relative;
+        .weekend {
+            clip-path: polygon(47% 50%, 0% 100%, 100% 100%);
+            background-color: #fa0000;
+            height: 90px;
+            width: 90px;
+            color: #000;
+            font-size: $font-size-x-small;
+            font-weight: 600;
+            color: #ffffff;
+            position: absolute;
+            text-align: center;
+            padding-top: 55px;
+            transform: rotate(-43deg);
+            margin-top: -48px;
+            margin-left: -45px;
+        }
+        .counter_card {
+            padding: 60px;
+            display: grid;
+            grid-template-columns: 3fr 3fr;
+            .left {
+                h3 {
+                    font-size: $font-size-large;
+                    color: red;
+                }
+                p {
+                    font-size: $font-size-small;
+                    color: $color-light-gray;
+                    margin: 10px 0;
+                }
+                .start {
+                    margin: 20px 0;
+                    i {
+                        font-size: $font-size-small;
+                        color: $color-yellow;
+                    }
+                }
+                .price {
+                    font-size: $font-size-small;
+                    margin: 20px 0;
+                    span {
+                        &:first-child {
+                            text-decoration: line-through;
+                        }
+                        &:nth-child(2) {
+                            color: #fff;
+                            background-color: red;
+                            font-weight: 600;
+                            padding: 3px;
+                        }
+                        &:last-child {
+                            color: rgb(0, 0, 0);
+                            font-weight: 600;
+                            padding: 3px;
+                        }
+                    }
+                }
+                .counter {
+                    margin: 20px 0;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-gap: 15px;
+                    text-align: center;
+                    p {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-gap: 5px;
+                        font-size: $font-size-small;
+                        color: $color-light-gray;
+                        span {
+                            border: 2px solid gray;
+                            font-size: $font-size-medium;
+                            font-weight: 600;
+                            border-radius: 5px;
+                            padding: 15px;
+                            color: #000;
+                        }
+                        &:last-child {
+                            span {
+                                color: $color-yellow;
+                            }
+                        }
+                    }
+                }
+                button {
+                    @include global_button;
+                    color: $color-dark;
+                    background-color: $color-yellow;
+                    &:hover {
+                        color: #fff;
+                        background-color: $color-dark;
+                    }
+                }
+            }
+            .right {
+                position: relative;
+                img {
+                    position:absolute;
+                    width: 100%;
+                    height:100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: 600px) {
+    .product_offer_counter_section {
+        margin-top:30px;
+        grid-template-columns: 1fr;
+        .offer_counter_sidebar {
+            display: none;
+        }
+        .middle_offer_counter {
+            justify-self:center;
+            height: 420px;
+            border: 2px solid #ececec;
+            border-radius: 5px;
+            position: relative;
+            
+            .counter_card {
+                padding:40px 10px 20px 20px;
+                display: grid;
+                grid-template-columns: 3fr 3fr;
+                .left {
+                    h3 {
+                        font-size: $font-size-large;
+                        color: red;
+                    }
+                    p {
+                        font-size: $font-size-small;
+                        color: $color-light-gray;
+                        margin: 10px 0;
+                    }
+                    .start {
+                        margin: 20px 0;
+                        i {
+                            font-size: $font-size-small;
+                            color: $color-yellow;
+                        }
+                    }
+                    .price {
+                        font-size: $font-size-small;
+                        margin: 20px 0;
+                        span {
+                            &:first-child {
+                                text-decoration: line-through;
+                            }
+                            &:nth-child(2) {
+                                color: #fff;
+                                background-color: red;
+                                font-weight: 600;
+                                padding: 3px;
+                            }
+                            &:last-child {
+                                color: rgb(0, 0, 0);
+                                font-weight: 600;
+                                padding: 3px;
+                            }
+                        }
+                    }
+                    .counter {
+                        margin: 20px 0;
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-gap: 15px;
+                        text-align: center;
+                        p {
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            grid-gap: 5px;
+                            font-size: $font-size-small;
+                            color: $color-light-gray;
+                            span {
+                                border: 2px solid gray;
+                                font-size: $font-size-medium;
+                                font-weight: 600;
+                                border-radius: 5px;
+                                padding: 15px;
+                                color: #000;
+                            }
+                            &:last-child {
+                                span {
+                                    color: $color-yellow;
+                                }
+                            }
+                        }
+                    }
+                    button {
+                        @include global_button;
+                        color: $color-dark;
+                        background-color: $color-yellow;
+                        &:hover {
+                            color: #fff;
+                            background-color: $color-dark;
+                        }
+                    }
+                }
+                .right {
+                    img {
+                        width: 100%;
+                        height: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// product offer counter section

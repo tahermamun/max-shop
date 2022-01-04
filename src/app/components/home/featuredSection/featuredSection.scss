@@ -1,0 +1,136 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+
+// featured_section start
+.featured_section {
+  // height: 300px;
+  display: grid;
+  grid-template-columns: 2fr 3fr 3fr;
+  grid-gap: 25px;
+  margin: 40px 0;
+  color: #fff;
+    // background-color: rgb(0, 132, 255);
+
+  .left {
+    // background-color: rgb(0, 132, 255);
+    border: 2px solid #ececec;
+    padding: 10px 10px;
+    .card {
+      margin-bottom: 10px;
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      grid-gap: 15px;
+      padding: 15px 15px 0px 15px;
+      border-bottom: 1px solid #ececec;
+      &:hover{
+        background-color: #ececec;
+      }
+      .icons {
+        padding: 15px;
+        border-radius: 50%;
+        background-color: $color-dark;
+        justify-self: center;
+        display: flex;
+        .icon {
+          color: #fff;
+          font-size: 25px;
+          justify-self: center;
+          align-self: center;
+        }
+      }
+      div {
+        h4 {
+          color: $color-dark;
+          font-size: 12px;
+          font-weight: 900;
+          line-height: 20px;
+        }
+        p {
+          color: $color-light-gray;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+  .middle {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    div {
+      position: relative;
+      img {
+        width: 100%;
+      }
+      .upper_div {
+        top: 60px;
+        left: 55%;
+      }
+      .bottom_div {
+        top: 60px;
+        left: 5%;
+      }
+      div {
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        position: absolute;
+        p {
+          font-size: $font-size-large;
+          font-weight: 300;
+          line-height: 28px;
+          color: #000;
+          span {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+          }
+          a {
+            @include global_button;
+            color: $color-yellow;
+          }
+        }
+      }
+    }
+  }
+  .right {
+    position: relative;
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    div {
+      position: absolute;
+      top: 40%;
+      left: 8%;
+      text-align: center;
+      h3 {
+        font-size: 22px;
+        font-weight: 500;
+      }
+      h1 {
+        font-size: 35px;
+        font-weight: 700;
+      }
+      button {
+        margin-top: 40px;
+        @include global_button;
+        background-color: $color-yellow;
+        &:hover {
+          color: #fff;
+          background-color: $color-dark;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 600px) {
+  .featured_section {
+    height: auto;
+    grid-template-columns: 1fr;
+    margin-bottom: -150px;
+  }
+}
+
+// featured_section end

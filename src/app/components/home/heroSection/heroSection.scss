@@ -1,0 +1,37 @@
+@import "../../../style/abstracts/mixins";
+@import "../../../style/abstracts/variables";
+
+// hero section start
+.hero_section {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+  grid-gap: 15px;
+  // height: 480px;
+
+  .main_carousel {
+    border-radius: 10px;
+    height: 480px;
+    width: 100%!important;
+  }
+}
+
+@media only screen and(max-width: 600px) {
+  .hero_section {
+    // grid-template-columns: 2fr 8fr;
+    grid-template-areas: "main_carousel main_carousel main_carousel"
+     "right_sabbanner right_sabbanner right_sabbanner";
+    grid-gap: 5px;
+    // height: 480px;
+
+    .main_carousel {
+      grid-area: main_carousel;
+      border-radius: 10px;
+      img {
+        height: 300px;
+        width: 100%;
+      }
+    }
+  }
+}
+// hero section end
